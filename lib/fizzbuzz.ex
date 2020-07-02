@@ -29,6 +29,17 @@ defmodule Fizzbuzz do
                       end
                     end)
   end
+
+  def fizzbuzzDifferently(num) when rem(num, 5) == 0 and rem(num, 3) == 0, do: "FizzBuzz" 
+  def fizzbuzzDifferently(num) when rem(num, 3) == 0, do: "Fizz" 
+  def fizzbuzzDifferently(num) when rem(num, 5) == 0, do: "Buzz" 
+  def fizzbuzzDifferently(num) ,  do: num  
+
+
+  #TO RUN ->  Enum.map(1..100, fn n -> Fizzbuzz.fizzbuzzDifferently n end)
+  #TO RUN 2 ->  Enum.map(1..100, &(Fizzbuzz.fizzbuzzDifferently(&1)))
+
+
 end
 
 
